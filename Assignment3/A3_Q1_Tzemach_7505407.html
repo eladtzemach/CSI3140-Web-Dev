@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Question 1</title>
+		<script>
+			window.addEventListener("load", initialize, false); //add an event listener in order to execute the initialize function when the page loads
+			
+			function initialize() //function that gets run when the page loads
+			{
+				document.getElementById("toCelcius").addEventListener("click", celsius); //add an event listener to the button with id "toCelcius"
+				document.getElementById("toFahrenheit").addEventListener("click", fahrenheit); //add an event listener to the button with id "toFahrenheit"
+			}
+					
+			function celsius() //function to calculate the degrees in celsius
+			{
+				var temp = document.getElementById("tempText").value; //Gets the temperature value entered into the text field
+				var result = 5 / 9 * (temp - 32); //calculates (or converts) the temperature to a celsius temperature
+				document.getElementById("result").innerHTML = "<p>The temperature in Celsius is: " + result.toFixed(2) + " ºC</p>"; //prints out the temperature in celsius, to 2 decimal places
+			}
+			
+			function fahrenheit() //function to calculate the degrees in fahrenheit
+			{
+				var temp = document.getElementById("tempText").value; //Gets the temperature value entered into the text field
+				var result = 9 / 5 * temp + 32; //calculates (or converts) the temperature to fahrenheit temperature
+				document.getElementById("result").innerHTML = "<p>The temperature in Fahrenheit is: " + result.toFixed(2) + " ºF</p>"; //prints out the temperature in fahrenheit, to 2 decimal places
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Temperature Converter - Celsius and Fahrenheit</h1>
+		<p>Enter the temperature: 
+		<input type = "text" id = "tempText" name = "temperature"></p>
+		<p id = "result"><br></p>
+		<button type = "button" id = "toCelcius">Convert to Celsius</button>
+		<button type = "button" id = "toFahrenheit">Convert to Fahrenheit</button>
+	</body>
+</html>

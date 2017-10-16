@@ -1,0 +1,57 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="A4_Q7_XSL_Tzemach_7505407.xsl"?>
+
+<product>
+	<productName>Grandma White's Cookies</productName>
+	<servingSize>1 package</servingSize>
+
+	<nutritionalFact>
+		<name>Calories</name>
+		<value>260</value>
+	</nutritionalFact>
+
+	<nutritionalFact>	
+		<name>Fat Calories</name>
+		<value>100</value>
+	</nutritionalFact>
+
+	<nutritionalFact>	
+		<name>Fat</name>
+		<value>11 g</value>
+	</nutritionalFact>
+
+	<nutritionalFact>	
+		<name>Saturated Fat</name>
+		<value>2 g</value>
+	</nutritionalFact>
+
+	<nutritionalFact>	
+		<name>Cholesterol</name>
+		<value>5 mg</value>
+	</nutritionalFact>	
+
+	<nutritionalFact>	
+		<name>Sodium</name>
+		<value>210 mg</value>
+	</nutritionalFact>
+
+	<nutritionalFact>	
+		<name>Carbohydrates</name>
+		<value>36 g</value>
+	</nutritionalFact>
+
+	<nutritionalFact>	
+		<name>Fiber</name>
+		<value>2 g</value>
+	</nutritionalFact>	
+
+	<nutritionalFact>	
+		<name>Sugars</name>
+		<value>15 g</value>
+	</nutritionalFact>	
+
+	<nutritionalFact>	
+		<name>Protein</name>
+		<value>5 g</value>
+	</nutritionalFact>
+</product>

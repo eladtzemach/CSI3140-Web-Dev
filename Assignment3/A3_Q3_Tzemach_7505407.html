@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Question 3</title>
+		<script>
+			window.addEventListener("load", initialize, false); //add an event listener in order to execute the initialize function when the page loads
+			
+			function initialize() //function that gets run when the page loads
+			{
+				document.getElementById("checkGuess").addEventListener("click", guessGame); //add an event listener to the button with id "checkGuess"
+				document.getElementById("resetButton").addEventListener("click", newGame); //add an event listener to the button with id "resetButton"
+			}
+			
+			var num = Math.floor(Math.random() * 1000 + 1); //generates a random number from 1 to 1000
+			var numGuesses = 0; //a counter for the number of guesses
+			var guesses = []; //create an empty array to keep track of the guesses
+			
+			function guessGame() //function used when the game is running
+			{ 
+				var guess = document.getElementById("guess").value; //Gets the guess entered into the text field 
+				guesses.push(guess); //add the guess to the guesses array
+				if(isNaN(guess) || guess < 1 || guess > 1000) { //check if the entered guess is not a number or in the valid range
+					document.getElementById("guessResult").innerHTML = "Wrong input! You should enter a number between 1 and 1000!"; //print an error message if the guess is invalid
+				} 
+				else { //if the input is valid
+					numGuesses++; //increments the number of guesses
+					if(guess > num) { //if the user's guess is greater than the random number
+						document.getElementById("guessResult").innerHTML = "Too high, try again!"; //print out a message letting them know that their guess is too high
+					} 
+					else if(guess < num) { //if the user's guess is less than the random number
+						document.getElementById("guessResult").innerHTML = "Too low, try again!"; //print out a message letting them know that their guess is too low
+					}
+					else { // if the user's guess is the same as the random number
+						document.getElementById("checkGuess").disabled = true; //disable the button to check the user's guess
+						if(numGuesses < 10) { //if the number of guesses is less than 10
+							document.getElementById("guessResult").innerHTML = "Congratulations, you guessed the number! Either you know the secret or you got lucky!"; //tell the user that they're lucky
+						}
+						else if(numGuesses == 10) { //if the number of guesses is 10
+							document.getElementById("guessResult").innerHTML = "Ahah! You know the secret, congratulations!"; //tell the user that they know the secret
+						}
+						else { //if the number of guesses is greater than 10
+							document.getElementById("guessResult").innerHTML = "Congratulations, but you should be able to do better!"; //tell the user they can do better
+						}
+						document.getElementById("guessResult").innerHTML += "<br>Your guesses were: " + guesses.join(", "); //prints out a message telling the users the guesses they took to get the number
+					}
+				}
+			}
+			
+			function newGame() //function to reset the game
+			{ 
+				num = Math.floor(Math.random() * 1000 + 1); //generate a new random number
+				document.getElementById("guess").value = ""; //reset the text field for the user
+				document.getElementById("checkGuess").disabled = false; //re-enable the button to check the user's guess
+				numGuesses = 0; //reset the number of guesses to 0
+				document.getElementById("guessResult").innerHTML = "<br>"; //clear the guessResult message
+				guesses = []; //resets the array of guesses to empty
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Guess A Number Game</h1>
+		<form action = "javascript:guessGame()">
+			<p>Guess a number between 1 and 1000: 
+			<input type = "text" id = "guess" name = "guessText"></p>
+			<p id = "guessResult"><br></p>
+		</form>
+		<button type = "button" id = "checkGuess">Check your guess!</button>
+		<button type = "button" id = "resetButton">Reset game!</button>
+	</body>
+</html>

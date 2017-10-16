@@ -1,0 +1,97 @@
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Assignment 2 Question 7</title>
+<script type = "text/javascript">
+
+//p#q = quantity of # product, p#t = total price of # given the quantity
+var p1t, p1q, p2t, p2q, p3t, p3q, p4t, p4q, p5t, p5q = 0;
+var p1p = 2.98;
+var p2p = 4.50;
+var p3p = 9.98;
+var p4p = 4.49;
+var p5p = 6.87;
+
+
+choice = window.prompt("Enter product number: (0 to exit) ");
+
+while (choice != 0){
+
+switch (choice){
+   case "1":
+     p1q = window.prompt("Enter product quantity: ");
+	 p1t = p1q*p1p;
+	 break;
+   case "2":
+     p2q = window.prompt("Enter product quantity: ");
+	 p2t = p2q*p2p;
+	 break;
+   case "3":
+     p3q = window.prompt("Enter product quantity: ");
+	 p3t = p3q*p3p;
+	 break;
+   case "4":
+     p4q = window.prompt("Enter product quantity: ");
+	 p4t = p4q*p4p;
+	 break;
+   case "5":
+     p5q = window.prompt("Enter product quantity: ");
+	 p5t = p5q*p5p;
+	 break;
+}
+  
+  choice = window.prompt("Enter product number: (0 to exit) ");
+}
+</script>
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style> </head>
+<body>
+<h2>Total Sales</h2>
+
+<table>
+  <tr>
+    <th>Product Number</th>
+    <th>Quantity</th>
+    <th>Total</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td><script type="text/javascript">document.write(p1q);</script></td>
+    <td><script type="text/javascript">document.write(p1t);</script></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td><script type="text/javascript">document.write(p2q);</script></td>
+    <td><script type="text/javascript">document.write(p2t);</script></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><script type="text/javascript">document.write(p3q);</script></td>
+    <td><script type="text/javascript">document.write(p3t);</script></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td><script type="text/javascript">document.write(p4q);</script></td>
+    <td><script type="text/javascript">document.write(p4t);</script></td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td><script type="text/javascript">document.write(p5q);</script></td>
+    <td><script type="text/javascript">document.write(p5t);</script></td>
+  </tr>
+</table>
+
+</body>
+</html>

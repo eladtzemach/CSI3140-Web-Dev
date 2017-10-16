@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta charset = "utf-8">
+
+<title>Assignment 2 Question 4</title>
+
+<style type = "text/css">
+
+#animation {
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    background-color: black;
+    position: relative;
+    -webkit-animation: movingImage linear 5s 1s infinite;
+    -moz-animation: movingImage linear 5s 1s infinite;
+    animation: movingImage linear 5s 1s infinite;
+    }
+    @-webkit-keyframes movingImage
+    {
+        0%   {opacity: 1; left: 0px; top: 0px;}
+        25%  {opacity: 1; left: 100px; top: 0px;}
+        50%  {opacity: 1; left: 100px; top: 100px;}
+        75%  {opacity: 1; left: 0px; top: 100px;}
+        100% {opacity: 1; left: 0px; top: 0px;}
+    }
+    @-moz-keyframes movingImage
+    {
+        0%   {opacity: 1; left: 0px; top: 0px;}
+        25%  {opacity: 1; left: 100px; top: 0px;}
+        50%  {opacity: 1; left: 100px; top: 100px;}
+        75%  {opacity: 1; left: 0px; top: 100px;}
+        100% {opacity: 1; left: 0px; top: 0px;}
+    }
+    @keyframes movingImage
+    {
+        0%   {opacity: 1; left: 0px; top: 0px;}
+        25%  {opacity: 1; left: 100px; top: 00px;}
+        50%  {opacity: 1; left: 100px; top: 100px;}
+        75%  {opacity: 1; left: 0px; top: 100px;}
+        100% {opacity: 1; left: 0px; top: 0px;}
+}
+			 
+</style>
+</head>
+<body>
+
+<div id="animation">
+
+
+</div>
+
+</body>
+</html>
